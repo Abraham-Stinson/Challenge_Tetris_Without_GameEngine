@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridGameProject", "GridGameProject.csproj", "{CD015C7C-0993-468C-8DCB-A7F9B6852B38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GameLogic", "GameLogic", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		Block.cs = Block.cs
+		BlockQueue.cs = BlockQueue.cs
+		GameState.cs = GameState.cs
+		GridValue.cs = GridValue.cs
+		I_Block.cs = I_Block.cs
+		L_Block.cs = L_Block.cs
+		O_Block.cs = O_Block.cs
+		Position.cs = Position.cs
+		T_Block.cs = T_Block.cs
+		Z_Block.cs = Z_Block.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD015C7C-0993-468C-8DCB-A7F9B6852B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD015C7C-0993-468C-8DCB-A7F9B6852B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD015C7C-0993-468C-8DCB-A7F9B6852B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD015C7C-0993-468C-8DCB-A7F9B6852B38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19605331-098B-4AB7-891A-9ABEDBC2C080}
+	EndGlobalSection
+EndGlobal
