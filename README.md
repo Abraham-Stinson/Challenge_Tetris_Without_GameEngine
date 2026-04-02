@@ -35,7 +35,8 @@ Oyun dünyasına ve mekaniklerine aşina bir geliştirici olarak bu projeyi yapm
 1. Bu depoyu bilgisayarınıza klonlayın:
    ```bash
    git clone [https://github.com/Abraham-Stinson/Challenge_Tetris_Without_GameEngine.git](https://github.com/Abraham-Stinson/Challenge_Tetris_Without_GameEngine.git)
-   Projeyi Visual Studio (2022 önerilir) ile açın.
+   
+Projeyi Visual Studio (2022 önerilir) ile açın.
 
 2.sln dosyasını çalıştırın.
 
