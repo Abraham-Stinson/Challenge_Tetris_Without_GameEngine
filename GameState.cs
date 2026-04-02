@@ -19,6 +19,9 @@ namespace GridGameProject.GameLogic
 
         private BlockQueue blockQueue;
 
+        public Block HeldBlock { get; private set; }
+        public bool CanHold { get; private set; } = true;
+
         public GameState(int rows, int columns)
         {
             Rows = rows;
@@ -122,12 +125,13 @@ namespace GridGameProject.GameLogic
         {
             foreach (Position p in CurrentBlock.TilePositions())
             {
-                GameGrid[p.Row, p.Column] = GridValue.Occupied; 
+                GameGrid[p.Row, p.Column] = GridValue.Occupied;
             }
 
             ClearFullRows();
 
             CurrentBlock = blockQueue.GetRandomBlock();
+            CanHold = true;
 
             if (!BlockFits())
             {
@@ -167,6 +171,40 @@ namespace GridGameProject.GameLogic
                     GameGrid[r, c] = GridValue.Empty;
                 }
             }
+        }
+
+        public void DropBlockToBottom()
+        {
+            while (true)
+            {
+                CurrentBlock.Move(1, 0);
+
+                if (!BlockFits())
+                {
+                    CurrentBlock.Move(-1, 0);
+                    PlaceBlock();
+                    break;
+                }
+            }
+        }
+
+        public void HoldBlock()
+        {
+            if (!CanHold) return;
+
+            if (HeldBlock == null)
+            {
+                HeldBlock = CurrentBlock;
+                CurrentBlock = blockQueue.GetRandomBlock();
+            }
+            else
+            {
+                Block temp = CurrentBlock;
+                CurrentBlock = HeldBlock;
+                HeldBlock = temp;
+            }
+
+            CanHold = false;
         }
     }
 }

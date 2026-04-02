@@ -61,6 +61,12 @@ namespace GridGameProject
                 case Key.Up:
                     gameState.RotateBlock();
                     break;
+                case Key.Space:
+                    gameState.DropBlockToBottom();
+                    break;
+                case Key.C:
+                    gameState.HoldBlock();
+                    break;
             }
             Draw();
         }
